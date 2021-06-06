@@ -1,0 +1,35 @@
+To
+to
+to
+to
+To
+to
+to
+to
+to
+To
+to
+To
+to
+To
+to
+q3.sh:	echo "IIIT Hyderabad is cool" >> o1.txt
+q3.sh:cat o1.txt | grep -o "IIIT Hyderabad is cool" | wc -l #7
+hamlet.txt:To be, or not to be: that is the question:
+hamlet.txt:That flesh is heir to, 'tis a consummation
+For who would bear the whips and scorns of time,
+The oppressor's wrong, the proud man's contumely,
+The pangs of despised love, the law's delay,
+--
+With a bare bodkin? who would fardels bear,
+To grunt and sweat under a weary life,
+But that the dread of something after death,
+--
+And makes us rather bear those ills we have
+Than fly to others that we know not of?
+Thus conscience does make cowards of us all;
+dolton adm dialout cdrom sudo dip plugdev lpadmin sambashare libvirtd kvm
+.
+./q3.sh
+./q2.sh
+./q1.sh
