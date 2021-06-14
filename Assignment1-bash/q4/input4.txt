@@ -1,0 +1,1 @@
+Bash scripting is the most fun thing I have ever done on my bash shell.

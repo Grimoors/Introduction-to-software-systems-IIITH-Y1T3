@@ -1,0 +1,56 @@
+This is the original input :  bash scripting is the most fun thing i have ever done on my bash shell.
+i would on you but this is hard.  
+
+Trying to just remove stopwords
+Bash scripting  the most fun thing I have ever done on my bash shell.
+This is a line
+there are 14 Words in this Line
+
+Bash
+This is a word
+scripting
+This is a word
+the
+This is a word
+most
+This is a word
+fun
+This is a word
+thing
+This is a word
+I
+This is a word
+have
+This is a word
+ever
+This is a word
+done
+This is a word
+on
+This is a word
+my
+This is a word
+bash
+This is a word
+shell.
+This is a word
+
+I would on you but this  hard.
+This is a line
+there are 7 Words in this Line
+
+I
+This is a word
+would
+This is a word
+on
+This is a word
+you
+This is a word
+but
+This is a word
+this
+This is a word
+hard.
+This is a word
+
