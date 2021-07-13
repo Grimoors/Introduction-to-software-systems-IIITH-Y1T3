@@ -58,7 +58,7 @@ do
     # done
     #A lot more is left
     searchWordFrequencyInInput=`echo $line | grep -o "$searchWord" | wc -w`
-    FinalAnswer=`echo "scale=2 ; $searchWordFrequencyInInput/$wordsInLine" | bc`
+    FinalAnswer="`echo "scale=2; 1.00 * $searchWordFrequencyInInput / $wordsInLine" | bc`"
     echo "$line,$FinalAnswer"
    }
 done < "./input4Copied.txt"

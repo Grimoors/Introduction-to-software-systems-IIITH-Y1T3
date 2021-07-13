@@ -105,6 +105,7 @@ cust_Delete ( )
     rm temp2.txt
     touch temp2.txt
 
+    
     rm contacts.csv
 
     N1=$(grep -n "$SearchValue" ./temp.txt)
