@@ -45,14 +45,32 @@ print(rules.rule_JSON)
 
 print("\n\n --Beginning to read the csv Data-- \n\n ")
 print("Seeing headers column and saving to an array 'Headers'\n")
+
+print("Version 2 - We need to exclude the 'status' column from the final result output in results.csv,\nhence I shall store the index of it in the variable - 'statInd'\n")
+statInd=int()
+
 Headers = []
 for row in data.data_CSV:
+    #Version 2 Code Edit Start
+    i=int()
+    i=0
+    #Version 2 Code Edit End
     for column_entry in row:
         Headers.append( column_entry.lower() )
-
+        #Version 2 Code Edit Start
+        if column_entry.lower() == 'status' :
+            statInd=i
+        i+=1
+        #Version 2 Code Edit End
     break
-print("Headers Column in data read \nEntries are :", Headers,"\n The number of columns are = ",len(Headers),"\nAppending Results column , such that there are now ", (len(Headers)+1),"Columns \n")
+#Version 2 Code Edit Start
+print("Headers Column in data read \nEntries are :", Headers,"\n The number of columns are = ",len(Headers),"\nAppending Results column , such that there are now ", (len(Headers)+1),"Columns\n\n---Version 2---\n\nDeleting Status Column, such that there are now ",(len (Headers)), "Columns")
+        #Version 2 Code Edit End
 Headers.append("results")
+#Version 2 Code Edit Start
+Headers.remove("status")
+        #Version 2 Code Edit End
+
 print(Headers,'\n')
 
 
@@ -68,10 +86,16 @@ dictkeys=list (rules.rule_JSON[0]["fields"].keys())
 print("Searching keys=",dictkeys)
 print("\nThe number of keys=",len(dictkeys),"\nCreating a List of indices of these fields in the header , 'SColInd' \n")
 
+
+
 SColInd=[]
 for i in range(0,len(dictkeys),1):
     SColInd.append( int( Headers.index(dictkeys[i].lower()) ) )
 print("Our Relevant columns for lookup are ",SColInd )
+
+#Version 2 Code Edit Start
+
+        #Version 2 Code Edit End
 
 print("Starting lookup and print of rows of 'data.data_CSV' ")
 

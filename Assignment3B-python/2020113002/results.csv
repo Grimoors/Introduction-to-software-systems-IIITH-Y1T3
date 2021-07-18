@@ -1,0 +1,4 @@
+email,profession,travel,symptomatic,chronic,results
+a@b.com,Healthcare,No,No,No,Active,High Risk
+x@y.com,IT,Yes,No,No,Active,Moderate Risk
+xyz@z.com,IT,Yes,Yes,Yes,In Active,High Risk
