@@ -122,13 +122,28 @@ with open("results.csv","at",newline='') as file:
         for dict1 in rules.rule_JSON:
             if(dict1["fields"] == searchField):
                 dictNumber=i
+                
             i+=1
         
         if(i==-1):
             print(" FATAL ERROR - The rules.json is incomplete! Please Update it to have the entry for field = ",searchField,"The program shall exit now. FATAL ERROR")
         else:
-            print("Lookup done, result =", rules.rule_JSON[dictNumber]["results"] ,",\nappending to row, and writing to file\n")
+            print(" Fields Lookup done, result =", rules.rule_JSON[dictNumber]["results"] ,",\nappending to row\n")
             row.append(rules.rule_JSON[dictNumber]["results"])
+            #Version 2 Code Edit Start
+            print(" Checking Validity of the Result by doing a subsidary lookup for the status value\n")
+            if rules.rule_JSON[dictNumber]["status"] == "In Active":
+                print("Due to Inactive Status, Invalidating the Results entry of Row")
+                row.pop(-1)
+                row.append("No Access")
+            else:
+                print("Validity is proper, moving on.\n")
+
+            print('Removing Status entry')
+            row.pop(statInd)
+
+            print("Writing to File")
+                #Version 2 Code Edit End
             writer.writerow(row)
 
 
